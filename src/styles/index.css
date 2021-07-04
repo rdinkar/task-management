@@ -1,0 +1,41 @@
+/* 
+main css file combines all components, containers and pages css 
+*/
+@import '~antd/dist/antd.css';
+@import './utils.css';
+
+body{
+  background-color: #f2f2f2;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.users-board{
+  padding: 15px;
+}
+
+.tasks-list .ant-list-items{
+  min-height: 166px;
+  max-height: 332px;
+  overflow-y: auto;
+}
+
+.tasks-list .task-text{
+  overflow-wrap: normal;
+  max-width: calc(100% - 40px);
+}
+
+.tasks-list .task-list-item{
+  border-bottom: solid 2px #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  header .guest-user-text {
+    display: none;
+  }
+}

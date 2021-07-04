@@ -1,0 +1,46 @@
+/* useful css classes */
+.disp-flex {
+  display: flex;
+}
+.vcenter {
+  align-items: center;
+}
+.justify-end{
+  justify-content: flex-end;
+}
+.center{
+  justify-content: center;
+}
+.clr-white {
+  color: #ffffff;
+}
+.margin-r-lg{
+  margin-right: 15px;
+}
+.margin-r-md{
+  margin-right: 10px;
+}
+.margin-r-sm{
+  margin-right: 5px;
+}
+.margin-l-lg{
+  margin-left: 15px;
+}
+.margin-l-md{
+  margin-left: 10px;
+}
+.margin-l-sm{
+  margin-left: 5px;
+}
+.margin-b-lg{
+  margin-bottom: 15px;
+}
+.margin-b-md{
+  margin-bottom: 10px;
+}
+.margin-b-sm{
+  margin-bottom: 5px;
+}
+.move{
+  cursor: move;
+}
