@@ -2,16 +2,22 @@
  * user boards container
  * maintains the state of users and their tasks
  */
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Board from "../../components/Board";
 import { Button, List } from "antd";
 import InputModal from "../../components/InputModal";
 
 const UserBoards = () => {
-  const [state, setState] = useState({
-    users: [],
+  const [state, updateState] = useState({
+    users: JSON.parse(localStorage.getItem('users') || '[]'),
     inputModalOpen: false,
   });
+  const setState = useCallback(
+    (st = {}) => {
+      updateState(st)
+      localStorage.setItem('users', JSON.stringify(st.users || []))
+    }, [updateState]
+  )
   const onInputModalSave = (value) => {
     setState({
       ...state,
